@@ -1,0 +1,726 @@
+{
+  "last_node_id": 76,
+  "last_link_id": 60,
+  "nodes": [
+    {
+      "id": 67,
+      "type": "LoadImage",
+      "pos": {
+        "0": 282.39398193359375,
+        "1": 1041.801513671875
+      },
+      "size": {
+        "0": 240.7857208251953,
+        "1": 474.6910705566406
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            52
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00001.png",
+        "image"
+      ]
+    },
+    {
+      "id": 69,
+      "type": "LoadImage",
+      "pos": {
+        "0": 542.3941650390625,
+        "1": 1041.801513671875
+      },
+      "size": {
+        "0": 240.7857208251953,
+        "1": 474.6910705566406
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            54
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00002.png",
+        "image"
+      ]
+    },
+    {
+      "id": 72,
+      "type": "LoadImage",
+      "pos": {
+        "0": 802.3941650390625,
+        "1": 1041.801513671875
+      },
+      "size": {
+        "0": 240.7857208251953,
+        "1": 474.6910705566406
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            55
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00003.png",
+        "image"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "ImageBatch",
+      "pos": {
+        "0": 122.39399719238281,
+        "1": 1641.80126953125
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 51
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      }
+    },
+    {
+      "id": 71,
+      "type": "ImageBatch",
+      "pos": {
+        "0": 122.39399719238281,
+        "1": 1741.80126953125
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 54
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            57
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      }
+    },
+    {
+      "id": 70,
+      "type": "ImageBatch",
+      "pos": {
+        "0": 372.39398193359375,
+        "1": 1681.80126953125
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 56
+        },
+        {
+          "name": "image2",
+          "type": "IMAGE",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            58
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageBatch"
+      }
+    },
+    {
+      "id": 59,
+      "type": "XX_hamer",
+      "pos": {
+        "0": 682.3941650390625,
+        "1": 1661.80126953125
+      },
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 58,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            50
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "hamer_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XX_hamer"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 66,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 42.39399337768555,
+        "1": 1861.80126953125
+      },
+      "size": [
+        966.8354606424939,
+        330.3137957724948
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 50
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 57,
+      "type": "XX_hamer",
+      "pos": {
+        "0": 1159.913818359375,
+        "1": 1193.986083984375
+      },
+      "size": [
+        210,
+        54
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "link": 39,
+          "widget": {
+            "name": "video_path"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            40
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "hamer_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XX_hamer"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 73,
+      "type": "LoadImage",
+      "pos": {
+        "0": -870,
+        "1": 1050
+      },
+      "size": [
+        240,
+        450
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            59
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_13057_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "XX_hamer",
+      "pos": {
+        "0": -610,
+        "1": 1050
+      },
+      "size": {
+        "0": 210,
+        "1": 78
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 59,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            60
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "hamer_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XX_hamer"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 75,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -380,
+        "1": 1050
+      },
+      "size": [
+        280,
+        450
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 51,
+      "type": "StringConstantMultiline",
+      "pos": {
+        "0": 1159.913818359375,
+        "1": 1043.986083984375
+      },
+      "size": [
+        380,
+        100
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            39
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringConstantMultiline"
+      },
+      "widgets_values": [
+        "F:\\AIGC\\000-human\\000-smpl\\2409-GVHMR\\main\\docs\\example_video\\0002.mp4",
+        false
+      ]
+    },
+    {
+      "id": 56,
+      "type": "easy showAnything",
+      "pos": {
+        "0": 1159.913818359375,
+        "1": 1303.986083984375
+      },
+      "size": [
+        380,
+        100
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "type": "*",
+          "link": 40,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything"
+      },
+      "widgets_values": [
+        "F:\\AIGC\\000-human\\000-smpl\\2409-GVHMR\\main\\docs\\example_video\\0002\\hamer.mp4"
+      ]
+    },
+    {
+      "id": 58,
+      "type": "LoadImage",
+      "pos": {
+        "0": 22.393999099731445,
+        "1": 1041.801513671875
+      },
+      "size": [
+        240.78572122472485,
+        474.6910616309465
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_13057_.png",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      39,
+      51,
+      0,
+      57,
+      1,
+      "STRING"
+    ],
+    [
+      40,
+      57,
+      0,
+      56,
+      0,
+      "*"
+    ],
+    [
+      50,
+      59,
+      0,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      51,
+      58,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      67,
+      0,
+      68,
+      1,
+      "IMAGE"
+    ],
+    [
+      54,
+      69,
+      0,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      55,
+      72,
+      0,
+      71,
+      1,
+      "IMAGE"
+    ],
+    [
+      56,
+      68,
+      0,
+      70,
+      0,
+      "IMAGE"
+    ],
+    [
+      57,
+      71,
+      0,
+      70,
+      1,
+      "IMAGE"
+    ],
+    [
+      58,
+      70,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      59,
+      73,
+      0,
+      74,
+      0,
+      "IMAGE"
+    ],
+    [
+      60,
+      74,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "本地视频处理",
+      "bounding": [
+        1130,
+        904,
+        436,
+        519
+      ],
+      "color": "#3f789e",
+      "font_size": 64,
+      "flags": {}
+    },
+    {
+      "title": "单图处理",
+      "bounding": [
+        -896,
+        903,
+        828,
+        645
+      ],
+      "color": "#3f789e",
+      "font_size": 64,
+      "flags": {}
+    },
+    {
+      "title": "多图批量处理",
+      "bounding": [
+        2,
+        899,
+        1080,
+        1359
+      ],
+      "color": "#3f789e",
+      "font_size": 64,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5644739300537773,
+      "offset": [
+        924.7104610489963,
+        -756.4899663834734
+      ]
+    }
+  },
+  "version": 0.4
+}
