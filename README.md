@@ -1,68 +1,18 @@
-# HaMeR: Hand Mesh Recovery
-Code repository for the paper:
-**Reconstructing Hands in 3D with Transformers**
+# Unoffice Hamer-ComfyUI by leo 
+base on [hamer](https://github.com/geopavlakos/hamer) ,基于此项目  
+![](workflows/000.jpg)  
+![](workflows/001.png)  
 
-[Georgios Pavlakos](https://geopavlakos.github.io/), [Dandan Shan](https://ddshan.github.io/), [Ilija Radosavovic](https://people.eecs.berkeley.edu/~ilija/), [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/), [David Fouhey](https://cs.nyu.edu/~fouhey/), [Jitendra Malik](http://people.eecs.berkeley.edu/~malik/)
+project consists of one nodes,  supports single-image, batch image, and video (input local address) 3D hand inference, similar to the MeshGraphormer hand inference model  
+含一个推理节点 ，支持单图，多图，视频(输入本地地址)3d手部推理，类似MeshGraphormer手部推理模型  
+  
+* workflows  
+The usage is simple, please refer to the workflow file  
+用法简单，可参考workflows文件夹下的工作流文件  
+  
+## 安装  
+Installation and models download, please referred to [hamer](https://github.com/geopavlakos/hamer)  
+相关模型下载及依赖，可参考[hamer](https://github.com/geopavlakos/hamer)  
 
-[![arXiv](https://img.shields.io/badge/arXiv-2305.20091-00ff00.svg)](https://arxiv.org/pdf/2312.05251.pdf)  [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://geopavlakos.github.io/hamer/)     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1rQbQzegFWGVOm1n1d-S6koOWDo7F2ucu?usp=sharing)  [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/geopavlakos/HaMeR)
-
-![teaser](assets/teaser.jpg)
-
-## Installation
-First you need to clone the repo:
-```
-git clone --recursive git@github.com:geopavlakos/hamer.git
-cd hamer
-```
-
-We recommend creating a virtual environment for HaMeR. You can use venv:
-```bash
-python3.10 -m venv .hamer
-source .hamer/bin/activate
-```
-
-or alternatively conda:
-```bash
-conda create --name hamer python=3.10
-conda activate hamer
-```
-
-Then, you can install the rest of the dependencies. This is for CUDA 11.7, but you can adapt accordingly:
-```bash
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu117
-pip install -e .[all]
-pip install -v -e third-party/ViTPose
-```
-
-You also need to download the trained models:
-```bash
-bash fetch_demo_data.sh
-```
-
-Besides these files, you also need to download the MANO model. Please visit the [MANO website](https://mano.is.tue.mpg.de) and register to get access to the downloads section.  We only require the right hand model. You need to put `MANO_RIGHT.pkl` under the `_DATA/data/mano` folder.
-
-
-## Acknowledgements
-Parts of the code are taken or adapted from the following repos:
-- [4DHumans](https://github.com/shubham-goel/4D-Humans)
-- [SLAHMR](https://github.com/vye16/slahmr)
-- [ProHMR](https://github.com/nkolot/ProHMR)
-- [SPIN](https://github.com/nkolot/SPIN)
-- [SMPLify-X](https://github.com/vchoutas/smplify-x)
-- [HMR](https://github.com/akanazawa/hmr)
-- [ViTPose](https://github.com/ViTAE-Transformer/ViTPose)
-- [Detectron2](https://github.com/facebookresearch/detectron2)
-
-Additionally, we thank [StabilityAI](https://stability.ai/) for a generous compute grant that enabled this work.
-
-## Citing
-If you find this code useful for your research, please consider citing the following paper:
-
-```bibtex
-@inproceedings{pavlakos2023reconstructing,
-    title={Reconstructing Hands in 3{D} with Transformers},
-    author={Pavlakos, Georgios and Shan, Dandan and Radosavovic, Ilija and Kanazawa, Angjoo and Fouhey, David and Malik, Jitendra},
-    booktitle={arxiv},
-    year={2023}
-}
-```
+you can change model path in infer.py  
+infer.py可配置模型地址  
