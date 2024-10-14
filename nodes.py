@@ -76,13 +76,10 @@ class XX_hamer:
             out_file = os.path.join(
                 os.path.dirname(video_path),
                 os.path.splitext(os.path.basename(video_path))[0],
-                'hamer.mp4'
-                )
+                'hamer.mp4')
             print(out_file)
             if not os.path.exists(out_file):
-                video2images(video_path)
                 infer_hamer(video_path)
-                images2video(video_path)
             return (image, out_file,)
         if image != None:
             img_outs = []
